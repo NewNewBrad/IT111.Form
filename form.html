@@ -17,16 +17,52 @@
 }
 
 form {
+	max-width: 580px;
+}
 
+fieldset{
+	padding: 10px;
+	border: 1px solid red;
 }
 
 label {
 	display: block;
 	margin-bottom: 5px;
+	margin-top: 10px;
 }
 
-input{
+input[type=text]
+input[type=email]{
+	widows: 98%;
 	height: 20px;
+	margin-bottom: 10px;
+}
+
+input[type=radio]
+input[type=checkbox]{
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+
+textarea{
+	width: 98%;
+	margin-bottom: 10px;
+	resize: both;
+}
+
+form li{
+	list-style-type: none;
+	margin-left: 15px;
+	margin-bottom: 5px;
+}
+
+form ul{
+	margin-bottom: 10px;
+}
+legend{
+	font-size: 1.3em;
+	padding: 8px;
+	font-style: italic;
 }
 
 </style>
@@ -37,13 +73,32 @@ input{
 <body>
 <form action="formhandler.php" method="post">
 <fieldset>
-<label>NAME</label>
+<legend>Contact Brad:</legend>
+
+<label>NAME:</label>
 <input type="text" name="name">
-<label>EMAIL</label>
+
+<label>EMAIL:</label>
 <input type="email" name="email">
 
+<label>GENDER:</label>
+<ul>
+<li><input type="radio" name="gender" value="female">female</li>
+<li><input type="radio" name="gender" value="male">male</li>
+</ul>
 
 
+<label>FAV WINES</label>
+<ul>
+<li><input type="checkbox" name="wines" value="cabernet">Cabernet</li>
+<li><input type="checkbox" name="wines" value="Merlot">Merlot</li>
+<li><input type="checkbox" name="wines" value="malbec">Malbec</li>
+<li><input type="checkbox" name="wines" value="shiraz">Shiraz</li>
+</ul>
+
+<label>COMMENTS</label>
+<textarea name="comments" rows="10"></textarea><br>
+<input type="submit" value="Submit">
 
 </fieldset>
 </form>
