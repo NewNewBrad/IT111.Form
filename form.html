@@ -3,15 +3,54 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>Form - IT111 - Brad Jones</title>
 
 <!--Remy Sharp Shim --> 
 <!--[if lte IE 9]> 
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" >
 </script> 
 <![endif]-->
+<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+
+form {
+
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input{
+	height: 20px;
+}
+
+</style>
+
+
 </head>
 
 <body>
+<form action="formhandler.php" method="post">
+<fieldset>
+<label>NAME</label>
+<input type="text" name="name">
+<label>EMAIL</label>
+<input type="email" name="email">
+
+
+
+
+</fieldset>
+</form>
+
+
+
+
+
 </body>
 </html>
